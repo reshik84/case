@@ -1,0 +1,29 @@
+2016/11/19 11:13:57 [error] 1078#1078: *29 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/case/config/module_user.php): failed to open stream: No such file or directory in /var/www/case/config/web.php on line 52
+PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/case/config/module_user.php' (include_path='.:/usr/share/php') in /var/www/case/config/web.php on line 52" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/19 11:15:30 [error] 1078#1078: *31 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/case/config/module_user.php): failed to open stream: No such file or directory in /var/www/case/config/web.php on line 52
+PHP message: PHP Fatal error:  require(): Failed opening required '/var/www/case/config/module_user.php' (include_path='.:/usr/share/php') in /var/www/case/config/web.php on line 52" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/28 18:11:05 [error] 1056#1056: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /template/index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/28 18:12:11 [error] 1056#1056: *8 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /template/index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/28 18:12:12 [error] 1056#1056: *8 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /template/index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/28 18:13:34 [error] 1056#1056: *11 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /t2/index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/11/29 12:33:16 [error] 1100#1100: *28 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Method yii\bootstrap\ActiveField::__toString() must not throw an exception, caught Error: Class 'app\models\ArrayHelper' not found in /var/www/case/modules/cases/views/admin/_case.php on line 0" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /admin/cases/create HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/admin/cases/index"
+2016/12/01 13:33:22 [error] 1026#1026: *804 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\widgets\\Bas...', 'yii\\widgets\\{cl...', Array, 15)
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/var/www/case/v...')
+#6 /var/" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /admin/operations/index HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/admin/operations/create"
+2016/12/01 18:05:36 [error] 1028#1028: *1158 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method yii\base\View::{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\base\\View', '{closure}')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\base\\View::...')
+#2 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 3)
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/var/www/case/v...')
+#6 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(113):" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /admin/operations/view?id=6 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/admin/operations/create"

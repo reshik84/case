@@ -38,6 +38,7 @@ AppAsset::register($this);
         'items' => [
             ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
             ['label' => Yii::t('app', 'About'),'url' => ['/site/about']],
+            ['label' => Yii::t('app', 'Cashin'),'url' => ['/operations/index/cashin']],
             ['label' => Yii::t('app', 'Login'), 'url' => ['/user/security/login'], 'visible' => Yii::$app->user->isGuest],
             ['label' => Yii::t('app', 'Register'), 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest],
             Yii::$app->user->isGuest ? (

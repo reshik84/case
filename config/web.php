@@ -58,7 +58,6 @@ $config = [
             'merchantId' => '41527',
             'merchantFormSecret' => 'rpqzmvs3',
             'checkDataSecret' => 'xtfs3kog',
-            'defaultCurrency' => 63,
             'defaultLanguage' => 'ru' // or 'en' 
         ],
     ],

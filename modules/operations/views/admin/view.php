@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'typename',
         'sum',
         'statusName',
+        'batch',
         'memo',
         'created_at:datetime',
         'confirmed_at:datetime'

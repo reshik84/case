@@ -8,6 +8,8 @@ use yii\web\Controller;
 use yarcode\freekassa\actions\ResultAction;
 use yarcode\freekassa\events\GatewayEvent;
 use yarcode\freekassa\Merchant;
+use app\models\Operation;
+use app\models\Operation_CASHIN;
 
 class BalanceController extends Controller
 {
@@ -56,18 +58,18 @@ class BalanceController extends Controller
      */
     public function handlePaymentRequest($event)
     {
-        $invoice = Invoice::findOne(ArrayHelper::getValue($event->gatewayData, 'MERCHANT_ORDER_ID'));
-
-        if (!$invoice instanceof Invoice ||
-            $invoice->status != Invoice::STATUS_NEW ||
-            ArrayHelper::getValue($event->gatewayData, 'AMOUNT') != $invoice->amount ||
+        $operation = Operation::findOne(['id' => ArrayHelper::getValue($event->gatewayData, 'MERCHANT_ORDER_ID'), 'status' => 0]);
+        if(!$operation instanceof Operation_CASHIN ||
+            $operation->sum != ArrayHelper::getValue($event->gatewayData, 'AMOUNT') ||
             ArrayHelper::getValue($event->gatewayData, 'MERCHANT_ID') != \Yii::$app->get($this->componentName)->merchantId
         )
-            return;
-
-        $invoice->debugData = VarDumper::dumpAsString($event->gatewayData);
-        $event->invoice = $invoice;
-        $event->handled = true;
+              return;
+        
+        $operation->batch = ArrayHelper::getValue($event->gatewayData, 'intid');
+        if($operation->confirm()){
+            $event->invoice = $operation;
+            $event->handled = true;
+        }
     }
 
     /**

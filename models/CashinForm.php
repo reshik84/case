@@ -14,7 +14,7 @@ class CashinForm extends Model
     public function rules() {
         return [
             ['sum', 'required'],
-            ['sum', 'integer', 'min' => 100, 'max' => '15000']
+            ['sum', 'integer', 'min' => 1]
         ];
     }
     

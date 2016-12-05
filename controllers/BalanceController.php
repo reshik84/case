@@ -56,7 +56,7 @@ class BalanceController extends Controller
      * @param GatewayEvent $event
      * @return bool
      */
-    public function handlePaymentRequest(&$event)
+    public function handlePaymentRequest($event)
     {
         $operation = Operation::findOne(['id' => ArrayHelper::getValue($event->gatewayData, 'MERCHANT_ORDER_ID'), 'status' => 0]);
         if(!$operation instanceof Operation_CASHIN ||
@@ -66,10 +66,9 @@ class BalanceController extends Controller
               return;
         
         $operation->batch = ArrayHelper::getValue($event->gatewayData, 'intid');
-        if($operation->confirm()){
-            $event->invoice = $operation;
-            $event->handled = true;
-        }
+        $operation->confirm();
+        $event->invoice = $operation;
+        $event->handled = true;
     }
 
     /**

@@ -5689,3 +5689,6 @@
 127.0.0.1 - - [05/Dec/2016:13:08:06 +0300] "GET /assets/c85c5c6/yii.js HTTP/1.1" 304 0 "http://case.local/balance/result" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
 127.0.0.1 - - [05/Dec/2016:13:08:06 +0300] "GET /assets/b2b7fc49/js/bootstrap.js HTTP/1.1" 304 0 "http://case.local/balance/result" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
 127.0.0.1 - - [05/Dec/2016:13:08:06 +0300] "GET /debug/default/toolbar?tag=58453c862a3be HTTP/1.1" 200 3388 "http://case.local/balance/result" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+127.0.0.1 - - [05/Dec/2016:13:15:46 +0300] "GET / HTTP/1.1" 200 7288 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+127.0.0.1 - - [05/Dec/2016:13:15:46 +0300] "GET /assets/c85c5c6/yii.js HTTP/1.1" 304 0 "http://case.local/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+127.0.0.1 - - [05/Dec/2016:13:15:46 +0300] "GET /debug/default/toolbar?tag=58453e5231104 HTTP/1.1" 200 3320 "http://case.local/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"

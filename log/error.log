@@ -27,3 +27,58 @@ Stack trace:
 #4 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/exception.php(385): yii\web\ErrorHandler->renderCallStackItem(NULL, NULL, 'yii\\base\\View', '{closure}', Array, 3)
 #5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(249): require('/var/www/case/v...')
 #6 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(113):" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /admin/operations/view?id=6 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/admin/operations/create"
+2016/12/05 12:18:43 [error] 963#963: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1045] Access denied for user 'case'@'localhost' (using password: YES) in /var/www/case/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'case', 'z1Ec3U2udjihvms...', NULL)
+#1 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/case/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->quer" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/05 12:20:56 [error] 964#964: *28 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'case'@'localhost' to database 'case' in /var/www/case/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'case', 'z1Ec3U2udjihvms...', NULL)
+#1 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/case/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAl" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/05 12:20:57 [error] 964#964: *28 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'case'@'localhost' to database 'case' in /var/www/case/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'case', 'z1Ec3U2udjihvms...', NULL)
+#1 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/case/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAl" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/05 12:20:57 [error] 964#964: *28 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'case'@'localhost' to database 'case' in /var/www/case/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'case', 'z1Ec3U2udjihvms...', NULL)
+#1 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/case/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAl" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/05 12:20:57 [error] 964#964: *28 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+PDOException: SQLSTATE[HY000] [1044] Access denied for user 'case'@'localhost' to database 'case' in /var/www/case/vendor/yiisoft/yii2/db/Connection.php:602
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(602): PDO->__construct('mysql:host=loca...', 'case', 'z1Ec3U2udjihvms...', NULL)
+#1 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(544): yii\db\Connection->createPdoInstance()
+#2 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(863): yii\db\Connection->open()
+#3 /var/www/case/vendor/yiisoft/yii2/db/Connection.php(850): yii\db\Connection->getMasterPdo()
+#4 /var/www/case/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAl" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"

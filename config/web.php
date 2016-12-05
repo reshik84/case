@@ -53,6 +53,14 @@ $config = [
                 ],
             ],
         ],
+        'freeKassa' => [
+            'class' => '\yarcode\freekassa\Merchant',
+            'merchantId' => '41527',
+            'merchantFormSecret' => 'rpqzmvs3',
+            'checkDataSecret' => 'xtfs3kog',
+            'defaultCurrency' => yarcode\freekassa\Merchant::CURRENCY_QIWI_RUB,
+            'defaultLanguage' => 'ru' // or 'en' 
+        ],
     ],
     'params' => $params,
     'modules' => [

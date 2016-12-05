@@ -354,6 +354,7 @@ class Merchant extends Component
      */
     public function checkHash($data)
     {
+
         if (!isset(
             $data['MERCHANT_ID'],
             $data['AMOUNT'],
@@ -368,7 +369,7 @@ class Merchant extends Component
 
         $params = [
             $this->merchantId,
-            static::formatAmount($data['AMOUNT']),
+            $data['AMOUNT'],
             $this->checkDataSecret,
             $data['MERCHANT_ORDER_ID']
         ];

@@ -40,7 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-          "yarcode\\freekassa\\": "./MyVendor/yii2-free-kassa/src"
+          "yarcode\\freekassa\\": "./MyVendor1/yii2-free-kassa/src"
         }
     },
     "extra": {

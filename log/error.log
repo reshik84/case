@@ -82,3 +82,8 @@ Stack trace:
 #5 /var/www/case/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
 #6 /var/www/case/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
 #7 /var/www/case/vendor/yiisoft/yii2/db/mysql/Schema.php(199): yii\db\Command->queryAl" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /balance HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/05 13:36:08 [error] 964#964: *115 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'yarcode\freekassa\Merchant' not found in /var/www/case/config/web.php:61
+Stack trace:
+#0 /var/www/case/web/index.php(10): require()
+#1 {main}
+  thrown in /var/www/case/config/web.php on line 61" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"

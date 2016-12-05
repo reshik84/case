@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "dektrium/yii2-user":"0.9.*@dev",
         "mongosoft/yii2-upload-behavior": "*",
-        "yii-dream-team/yii2-perfect-money": "dev-master"
+        "yii-dream-team/yii2-perfect-money": "dev-master",
+        "guzzlehttp/guzzle": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

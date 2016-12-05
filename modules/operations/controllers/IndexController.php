@@ -52,6 +52,11 @@ class IndexController extends Controller
             return $this->render('payment', ['model' => $operation]);
         }
     }
+    
+    public function actionCashout(){
+        $api = new \yarcode\freekassa\Api();
+        print_r($api->balance());
+    }
 
     
     protected function performAjaxValidation($model)

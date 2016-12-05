@@ -60,12 +60,14 @@ class Api extends Component
     protected function call($action, $params = [])
     {
         $defaults = [
-            'wallet_id' => $this->walletId,
-            'action' => $action
+            'action' => $action,
+            'data' => [
+                'wallet_id' => $this->walletId,
+            ]
         ];
 
         $client = $this->getHttpClient();
-
+        
         $result = $client->post(null, [
             'form_params' => ArrayHelper::merge($defaults, $params)
         ]);
@@ -98,12 +100,12 @@ class Api extends Component
         $data = [
             'purse' => $wallet,
             'amount' => $amount,
-            'desc' => $description,
+            'desc' => 'test payment',
             'currency' => $currency,
+            
             'sign' => md5(implode('',
                 [$this->walletId, $currency, static::formatAmount($amount), $wallet, $this->apiKey]))
         ];
-
         return $this->call('cashout', ['data' => $data]);
     }
 

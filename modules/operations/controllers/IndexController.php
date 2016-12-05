@@ -54,8 +54,7 @@ class IndexController extends Controller
     }
     
     public function actionCashout(){
-        $api = new \yarcode\freekassa\Api();
-        print_r($api->balance());
+        print_r(\Yii::$app->freeKassa_api->withdraw('79186621736', '3', 'description', 63, NULL));
     }
 
     

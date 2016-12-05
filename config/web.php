@@ -60,6 +60,12 @@ $config = [
             'checkDataSecret' => 'xtfs3kog',
             'defaultLanguage' => 'ru' // or 'en' 
         ],
+        'freeKassa_api' => [
+            'class' => '\yarcode\freekassa\Api',
+            'merchantId' => '41527',
+            'walletId' => 'F101302758',
+            'apiKey' => '58C9F44BCD7D9D38EED28E457845A9E1'
+        ],
     ],
     'params' => $params,
     'modules' => [

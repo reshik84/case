@@ -5,6 +5,7 @@ return [
 //    'admins' => ['admin'],
     'modelMap' => [
         'User' => 'app\models\User',
+        'RegistrationForm' => 'app\models\RegistrationForm',
     ],
     'controllerMap' => [
         'admin' => [

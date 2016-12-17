@@ -23,13 +23,18 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
-    /*
+    
     'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
+        'migrate' => [ // Fixture generation command line.
+            'class' => 'yii\console\controllers\MigrateController',
+            'migrationNamespaces' => [
+                'dektrium\user\migrations\Migration',
+                'app\migrations',
+                ''
+            ]
         ],
     ],
-    */
+    
 ];
 
 if (YII_ENV_DEV) {

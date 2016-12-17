@@ -68,6 +68,7 @@ AppAsset::register($this);
                         ['label' => 'Users', 'url' => ['/user/admin']],
                         ['label' => 'Cases', 'url' => ['/cases/admin']],
                         ['label' => 'Operations', 'url' => ['/operations/admin']],
+                        ['label' => 'Settings', 'url' => ['/settings/manager']],
                     ]
                 ]);
                 ?>

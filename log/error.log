@@ -87,3 +87,65 @@ Stack trace:
 #0 /var/www/case/web/index.php(10): require()
 #1 {main}
   thrown in /var/www/case/config/web.php on line 61" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/06 18:01:53 [error] 979#979: *134 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('GuzzleHttp\\Hand...', 'GuzzleHttp\\Hand...')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('GuzzleHttp\\Hand...')
+#2 /var/www/case/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/case/v...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('/var/www/case/v...', Array, Object(yii\web\ErrorHandler))
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /var/www/case/vendor/yiisof" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /operations/index/cashout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/06 18:02:45 [error] 979#979: *134 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('GuzzleHttp\\Hand...', 'GuzzleHttp\\Hand...')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('GuzzleHttp\\Hand...')
+#2 /var/www/case/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/case/v...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('/var/www/case/v...', Array, Object(yii\web\ErrorHandler))
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /var/www/case/vendor/yiisof" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /operations/index/cashout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/06 18:02:46 [error] 979#979: *134 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method GuzzleHttp\Handler\Proxy::GuzzleHttp\Handler\{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('GuzzleHttp\\Hand...', 'GuzzleHttp\\Hand...')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('GuzzleHttp\\Hand...')
+#2 /var/www/case/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/case/v...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('/var/www/case/v...', Array, Object(yii\web\ErrorHandler))
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /var/www/case/vendor/yiisof" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /operations/index/cashout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/12 17:27:13 [error] 1012#1012: *257 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'AccessControl' not found in /var/www/case/config/web.php:87
+Stack trace:
+#0 /var/www/case/web/index.php(10): require()
+#1 {main}
+  thrown in /var/www/case/config/web.php on line 87" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /settings/manager/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/12 17:27:26 [error] 1012#1012: *257 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function AccessControl() in /var/www/case/config/web.php:87
+Stack trace:
+#0 /var/www/case/web/index.php(10): require()
+#1 {main}
+  thrown in /var/www/case/config/web.php on line 87" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /settings/manager/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/12 17:30:20 [error] 1012#1012: *277 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'AccessControl' not found in /var/www/case/config/web.php:88
+Stack trace:
+#0 /var/www/case/web/index.php(10): require()
+#1 {main}
+  thrown in /var/www/case/config/web.php on line 88" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /settings/manager/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/12 17:30:44 [error] 1012#1012: *277 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'AccessRule' not found in /var/www/case/config/web.php:90
+Stack trace:
+#0 /var/www/case/web/index.php(10): require()
+#1 {main}
+  thrown in /var/www/case/config/web.php on line 90" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /settings/manager/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"
+2016/12/12 17:34:36 [error] 1012#1012: *331 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file, expecting ';' in /var/www/case/config/access.php on line 16" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /settings/manager/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/user/login"
+2016/12/13 19:16:29 [error] 966#966: *98 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot declare class app\models\RegistrationForm because the name is already in use in /var/www/case/models/RegistrationForm.php on line 7" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /user/register HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local", referrer: "http://case.local/user/login"
+2016/12/16 15:18:13 [error] 963#963: *591 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+ReflectionException: Method yii\widgets\BaseListView::yii\widgets\{closure}() does not exist in /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php:199
+Stack trace:
+#0 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(199): ReflectionMethod->__construct('yii\\widgets\\Bas...', 'yii\\widgets\\{cl...')
+#1 /var/www/case/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php(26): yii\web\ErrorHandler->addTypeLinks('yii\\widgets\\Bas...')
+#2 /var/www/case/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/case/v...')
+#3 /var/www/case/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/case/v...', Array)
+#4 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(253): yii\base\View->renderFile('/var/www/case/v...', Array, Object(yii\web\ErrorHandler))
+#5 /var/www/case/vendor/yiisoft/yii2/web/ErrorHandler.php(307): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#6 /var/www/case/vendor/yiisoft/yi" while reading response header from upstream, client: 127.0.0.1, server: case.local, request: "GET /operations/history/index?page=1 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "case.local"

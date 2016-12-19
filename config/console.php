@@ -29,8 +29,7 @@ $config = [
             'class' => 'yii\console\controllers\MigrateController',
             'migrationNamespaces' => [
                 'dektrium\user\migrations\Migration',
-                'app\migrations',
-                ''
+//                '' => 'app\migrations'
             ]
         ],
     ],

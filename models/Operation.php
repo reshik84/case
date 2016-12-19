@@ -66,15 +66,15 @@ class Operation extends \yii\db\ActiveRecord {
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'type' => 'Type',
-            'typename' => 'Type',
-            'sum' => 'Sum',
+            'type' => 'Тип',
+            'typename' => 'Тип',
+            'sum' => 'Сумма',
             'batch' => 'Batch',
-            'created_at' => 'Created At',
-            'confirmed_at' => 'Confirmed At',
-            'status' => 'Status',
-            'statusName' => 'Status',
-            'memo' => 'Memo',
+            'created_at' => 'Создана',
+            'confirmed_at' => 'Подтверждена',
+            'status' => 'Статус',
+            'statusname' => 'Статус',
+            'memo' => 'Примечание',
             'case_id' => 'Case ID',
             'ref_id' => 'Ref ID',
         ];
@@ -159,16 +159,25 @@ class Operation extends \yii\db\ActiveRecord {
     }
 
     public function confirm(){
-        if(static::process()){
+        $res = static::process();
+        if($res){
             $this->confirmed_at = time();
             $this->status = self::STATUS_CONFIRMED;
             $this->save();
         }
+        return $res;
     }
     
     public function cancel(){
         $this->status = self::STATUS_CANCEL;
         $this->save();
+    }
+    
+    public static function create($type){
+        $classname = 'app\\models\\Operation_' . $type;
+        $class = new $classname;
+        $class->type = $type;
+        return $class;
     }
         
 }

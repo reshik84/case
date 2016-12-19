@@ -61,17 +61,13 @@ class Api extends Component
     {
         $defaults = [
             'action' => $action,
-            'data' => [
-                'wallet_id' => $this->walletId,
-            ]
+            'wallet_id' => $this->walletId,
+            
         ];
-
         $client = $this->getHttpClient();
-        
         $result = $client->post(null, [
             'form_params' => ArrayHelper::merge($defaults, $params)
         ]);
-
         return Json::decode($result->getBody());
     }
 
@@ -99,14 +95,14 @@ class Api extends Component
     {
         $data = [
             'purse' => $wallet,
-            'amount' => $amount,
-            'desc' => 'test payment',
+            'amount' => $this->formatAmount($amount),
+            'desc' => $description,
             'currency' => $currency,
             
             'sign' => md5(implode('',
                 [$this->walletId, $currency, static::formatAmount($amount), $wallet, $this->apiKey]))
         ];
-        return $this->call('cashout', ['data' => $data]);
+        return $this->call('cashout', $data);
     }
 
     /**

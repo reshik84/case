@@ -24,7 +24,7 @@ class User extends BaseUser
     
     public function rules() {
         $rules = parent::rules();
-        $rules[] = ['balance', 'number'];
+        $rules[] = ['balance', 'number', 'min' => 0];
         $rules[] = ['role', 'in', 'range' => ['user', 'admin']];
         return $rules;
     }

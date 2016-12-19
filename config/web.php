@@ -43,7 +43,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'admin/<module>/<action>' => '<module>/admin/<action>'
+                'admin/settings/<action>' => 'settings/manager/<action>',
+                'admin/settings' => 'settings/manager',
+                'admin/<module>/<action>' => '<module>/admin/<action>',
             ],
         ],
         'view' => [
@@ -66,6 +68,9 @@ $config = [
             'walletId' => 'F101302758',
             'apiKey' => '58C9F44BCD7D9D38EED28E457845A9E1'
         ],
+        'settings'=>[ 
+             'class'=>'johnitvn\settings\components\Settings' 
+        ],
     ],
     'params' => $params,
     'modules' => [
@@ -78,6 +83,14 @@ $config = [
         ],
         'operations' => [
             'class' => 'app\modules\operations\Module',
+        ],
+        'settings' => [ 
+            'class'=>'johnitvn\settings\Module', 
+            'as Access' => require (__DIR__ . '/access.php'),
+            'layout' => '//admin',
+        ],
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
         ],
     ]
 ];

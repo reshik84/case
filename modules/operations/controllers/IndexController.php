@@ -12,9 +12,11 @@ use yii\widgets\ActiveForm;
 use app\models\CashinForm;
 use app\models\Operation_CASHIN;
 use yii\web\NotFoundHttpException;
+use app\models\CashoutForm;
 
 class IndexController extends Controller
 {
+    public $layout = '//main';
     
     public function behaviors() {
         return [
@@ -45,7 +47,7 @@ class IndexController extends Controller
     
     public function actionPayment($id){
         $operation = $this->findModel($id);
-        if ($operation instanceof Operation_CASHIN &&
+        if (($operation instanceof Operation_CASHIN) &&
             $operation->status == Operation::STATUS_NOT_CONFIRMED &&
             $operation->user_id == \Yii::$app->user->id
         ){
@@ -54,11 +56,24 @@ class IndexController extends Controller
     }
     
     public function actionCashout(){
-        print_r(\Yii::$app->freeKassa_api->withdraw('79186621736', '3', 'description', 63, NULL));
+        
+        $model = new CashoutForm();
+        if($model->load(\Yii::$app->request->post()) && $model->validate()){
+            $operation = $model->createOperation();
+            if($operation->confirm()){
+                return $this->redirect(['cashoutsuccess']);
+            } else {
+                $model->addErrors($operation->errors);
+            }
+        }
+        return $this->render('cashout', ['model' => $model]);
     }
 
-    
-    protected function performAjaxValidation($model)
+    public function actionCashoutsuccess(){
+        return $this->render('cashout_success');
+    }
+
+        protected function performAjaxValidation($model)
     {
         if (\Yii::$app->request->isAjax && !\Yii::$app->request->isPjax) {
             if ($model->load(\Yii::$app->request->post())) {

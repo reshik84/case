@@ -28,4 +28,10 @@ class CashinForm extends Model
         $this->id = $operation->id;
     }
     
+    public function attributeLabels() {
+        return [
+            'sum' => 'Сумма, руб'
+        ];
+    }
+    
 }

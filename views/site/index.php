@@ -7,7 +7,7 @@ use yii\helpers\Html;
 $this->title = 'Главная';
 ?>
 <div class="site-index">
-
+<?= app\widgets\prize\PrizeWidget::widget() ?>
     <h2>Кейсы</h2>
 
     <div class="cases">
@@ -26,4 +26,7 @@ $this->title = 'Главная';
             </div>
         <?php endforeach; ?>
     </div>
+<h3 class="hidden-xs">Самые везучие</h3>    
+<?= app\widgets\prize\PrizeWidget::widget(['type' => 'lucky']) ?>    
+    
 </div>

@@ -43,6 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= $form->field($model, 'password_confirm')->passwordInput() ?>
                 <?php endif ?>
 
+                <?= $form->field($model, 'sponsor')->textInput(['readonly' => true]) ?>
                 <?= $form->field($model, 'agree')->checkbox(['tabindex' => '4', 'label' => 'Я принимаю ' . Html::a('пользовательское соглашение', ['/site/rules'], ['target' => '_blank'])]) ?>
                 
                 <?= Html::submitButton(Yii::t('user', 'Sign up'), ['class' => 'btn btn-success btn-block']) ?>

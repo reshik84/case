@@ -59,8 +59,18 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionIndex($ref = '')
     {
+        if(Yii::$app->user->isGuest && $ref != ''){
+            $sponsor = \app\models\User::find(['username' => $ref])->one();
+            if($sponsor){
+                \Yii::$app->response->cookies->add(new \yii\web\Cookie([
+                    'name' => 'sponsor_id',
+                    'value' => $sponsor->id
+                ]));
+            }
+            return $this->redirect('/');
+        }
         $cases = Cases::find()->where(['active' => '1'])->all();
         return $this->render('index', ['cases' => $cases]);
     }
@@ -92,5 +102,15 @@ class SiteController extends Controller
     {
         return $this->render('rules');
     }
+    
+//    public function actionTest(){
+//        return $this->render('test');
+//    }
+//    public function actionTest2(){
+////        $sp = \app\websocket\Client::websocket_open('tcp://127.0.0.1:8004');
+////        \app\websocket\Client::websocket_write($sp, 'test');
+//        Yii::$app->websocket->write('123');
+//        print_r(Yii::$app->websocket->read());
+//    }
     
 }

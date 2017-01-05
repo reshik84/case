@@ -71,6 +71,10 @@ $config = [
         'settings'=>[ 
              'class'=>'johnitvn\settings\components\Settings' 
         ],
+        'websocket' => [
+            'class' => 'app\websocket\Client',
+            'url' => 'tcp://127.0.0.1:8004',
+        ],
     ],
     'params' => $params,
     'modules' => [

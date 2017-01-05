@@ -25,6 +25,8 @@ class Operation_PRIZE extends Operation{
             $sum = rand($case->min, $case->real_max);
         } while ($sum > $found);
         
+        $sum = $sum - $sum % 5;
+        
         return $sum;
     }
     

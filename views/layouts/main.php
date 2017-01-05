@@ -32,7 +32,7 @@ MainAsset::register($this);
                         'brandLabel' => Html::img('/images/logo.png'),
                         'brandUrl' => Yii::$app->homeUrl,
                         'options' => [
-                            'class' => 'navbar-inverse navbar-fixed-top',
+                            'class' => 'navbar-inverse navbar-fixed-top top-menu',
                         ],
                     ]);
                     echo Nav::widget([

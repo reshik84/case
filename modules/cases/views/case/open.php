@@ -11,18 +11,20 @@ yii\widgets\Pjax::begin()
 ?>
 <div class="site-index">
 
-    <h2>Кейсы</h2>
+    <h2>Кейс за <?= Yii::$app->formatter->asInteger($case->sum) ?> р.</h2>
     <div class="cases">
             <div>
+                <h3>Кейс за <?= Yii::$app->formatter->asInteger($case->sum) ?> р.</h3>
                 <p>Содержит от <?= Yii::$app->formatter->asInteger($case->min) ?> р. до <?= Yii::$app->formatter->asInteger($case->max) ?> р. 
                     <span class="case-box">
-                        <?= Html::img($case->getBehavior('image2')->getUploadUrl('image2')) ?>
+                        <?= Html::img($case->getBehavior('image')->getUploadUrl('image'), ['id' => 'img_open']) ?>
+                        <?= Html::img($case->getBehavior('image2')->getUploadUrl('image2'), ['id' => 'img_open2', 'class' => 'hidden']) ?>
                     </span>
                 </p>
                 <?php if(Yii::$app->session->hasFlash('prize')): ?>
-                    <p>Выигрыш <span id="prize">0</span> р.</p>
-                    <?php $this->registerJs("$('#prize').animateNumber({ number: ".Yii::$app->session->getFlash('prize')." }, 1500, function(){ $('#more').removeClass('hidden')});"); ?>
-                    <?php $this->registerJs("$('#bal').text('".Yii::$app->formatter->asInteger($sum)."');"); ?>
+                <p class="prize_sum hidden">Выигрыш <span><?= Yii::$app->session->getFlash('prize') ?></span> р.</p>
+                    <?php $this->registerJsFile('/js/case.js'); ?>
+                    <?php $this->registerJs("opencase('".Yii::$app->formatter->asInteger($sum)."');"); ?>
                 <?php endif; ?>
                 <p>
                     <?= Html::a('Еще раз', ['/cases/case', 'id' => $case->id], ['class' => 'button hidden', 'id' => 'more']) ?>

@@ -20,6 +20,19 @@ $config = [
                 ],
             ],
         ],
+        'websocket' => [
+            'class' => 'morozovsk\yii2websocket\Connection',
+            'servers' => [
+                'case' => [
+                    'class' => 'app\websocket\cases\CaseWebsocketDaemonHandler',
+                    'pid' => '/tmp/websocket_chat.pid',
+                    'websocket' => 'tcp://127.0.0.1:8004',
+                    'localsocket' => 'tcp://127.0.0.1:8010',
+                    //'master' => 'tcp://127.0.0.1:8020',
+                    //'eventDriver' => 'event'
+                ]
+            ],
+        ],
         'db' => $db,
     ],
     'params' => $params,
@@ -31,6 +44,7 @@ $config = [
                 'dektrium\user\migrations\Migration',
             ]
         ],
+        'websocket' => 'morozovsk\yii2websocket\console\controllers\WebsocketController'
     ],
     
 ];

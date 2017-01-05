@@ -8,6 +8,7 @@ use Yii;
 class User extends BaseUser
 {   
 
+
     public function scenarios()
     {
         $scenarios = parent::scenarios();
@@ -19,6 +20,8 @@ class User extends BaseUser
         $scenarios['create'][] = 'role';
         $scenarios['update'][] = 'role';
         
+        $scenarios['register'][] = 'sponsor_id';
+        
         return $scenarios;
     }
     
@@ -26,6 +29,7 @@ class User extends BaseUser
         $rules = parent::rules();
         $rules[] = ['balance', 'number', 'min' => 0];
         $rules[] = ['role', 'in', 'range' => ['user', 'admin']];
+        $rules[] = ['sponsor_id', 'number'];
         return $rules;
     }
     
@@ -43,6 +47,10 @@ class User extends BaseUser
             }
             return TRUE;
         }
+    }
+    
+    public function getSponsor(){
+        return $this->hasOne(User::className(), ['id' => 'sponsor_id']);
     }
     
 }

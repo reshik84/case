@@ -132,9 +132,9 @@ fieldset textarea { vertical-align: text-top; }
 #wrapper>footer,#wrapper>footer:before,#colswrp:after,.mainnavigation:after,.mainnavigation:before{content:""; display:block;clear:both;}
 
 .cases{text-align:center;}
-.cases>div{width:235px; height:255px; display:inline-block; position:relative; vertical-align:top; margin:10px; padding:10px; overflow:hidden; border-radius:8px;box-shadow: 0px 0px 2px 2px rgba(170,170,170,.35);}
-.cases>div p{display:block;margin:16px 0px; padding:0px; text-indent:0px; text-align:center;}
-.cases>div>p:nth-child(2){font-size:120%; font-weight:600;}
+.cases>div{width:235px; height:255px; display:inline-block; position:relative; vertical-align:top; margin:10px; padding:10px; overflow:hidden; border-radius:8px;box-shadow: 0px 0px 50px 50px rgba(50,140,150,.7) inset;}
+.cases>div p{display:block;margin:10px 0px; padding:0px; text-indent:0px; text-align:center;}
+.cases>div>p.big{font-size:120%; font-weight:600;}
 .cases>div .button{width:200px; position:absolute; bottom:10px; left:calc(100% - 218px);}
 .cases>div p>span[class*="case-box"]{ display:block; height:90px; margin-top:16px;}
 .cases>div p>span.case-box-winner{background:transparent url(../images/case-winner.png) center center no-repeat;}
@@ -155,7 +155,7 @@ fieldset textarea { vertical-align: text-top; }
 .copyright a:link,.copyright a:visited{ text-decoration:none; color:white;}
 
 .button,button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]{
-display: inline-block; padding: 8px 12px; margin: 0px; border: solid 1px #ffffff; border-collapse: separate; border-radius: 4px; background-origin: border-box; background-color: #333333; box-shadow: 0px 0px 2px 1px rgba(255,255,255,0.2);
+display: inline-block; padding: 8px 12px; margin: 0px; border: solid 1px #ffffff; border-collapse: separate; border-radius: 4px; background-origin: border-box; background-color: #7ccf54; box-shadow: 0px 0px 2px 1px rgba(255,255,255,0.2);
 font-size:100%; color:white; margin:6px;
 cursor: pointer;
 }
@@ -261,4 +261,42 @@ img.fleft { display: block; margin: 5px 5px 5px 0px; }
 
 .has-error .form-control{
     border-color: #f00;
+}
+
+.win{
+    border: 1px solid #5479cf;
+    border-radius: 25px;
+    margin: 10px;
+    width: 11%;
+    display: inline-block;
+    box-shadow: 0 0 20px 20px rgba(50, 140, 150, 0.7) inset;
+}
+
+.top-menu{
+    box-shadow: 0 0 20px 20px rgba(50, 140, 150, 0.7) inset;
+}
+
+.top-menu li > a{
+    color: #fff !important;
+}
+
+.top-menu li > a:hover{
+    text-decoration: underline;
+}
+
+#prize {
+    height: 100px;
+    overflow: hidden;
+}
+
+.win{
+    display: inline-block;
+    width: auto;
+    padding: 10px 15px 10px 10px;
+    overflow: hidden;
+    height: 80px;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    color: #000;
 }

@@ -7,6 +7,7 @@ use app\models\Cases;
 use app\models\Operation;
 use yii\filters\AccessControl;
 use dektrium\user\filters\AccessRule;
+use app\models\Refsys;
 
 /**
  * Default controller for the `cases` module
@@ -58,6 +59,9 @@ class CaseController extends Controller {
         $operation->memo = 'Открытие кейса "' . $case->name . '"';
 //        $operation->save();
         if($operation->confirm()){
+            
+            Refsys::process($operation);
+            
             $prize = Operation::create('PRIZE');
             $prize->case_id = $operation->case_id;
             $prize->user_id = $operation->user_id;

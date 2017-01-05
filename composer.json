@@ -23,7 +23,9 @@
         "yii-dream-team/yii2-perfect-money": "dev-master",
         "guzzlehttp/guzzle": "dev-master",
         "johnitvn/yii2-settings": "*",
-        "kartik-v/yii2-grid": "@dev"
+        "kartik-v/yii2-grid": "@dev",
+        "yiisoft/yii2-jui": "~2.0.0",
+        "morozovsk/yii2-websocket": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

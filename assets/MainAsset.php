@@ -21,10 +21,12 @@ class MainAsset extends AssetBundle
         'css/template.css',
     ];
     public $js = [
-        'js/jquery.animateNumber.min.js'
+        'js/jquery.animateNumber.min.js',
+//        'js/case.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
+        'yii\jui\JuiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
 }

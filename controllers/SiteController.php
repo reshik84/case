@@ -103,6 +103,11 @@ class SiteController extends Controller
         return $this->render('rules');
     }
     
+    public function actionReferal(){
+        return $this->render('refsys');
+    }
+
+
 //    public function actionTest(){
 //        return $this->render('test');
 //    }

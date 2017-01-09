@@ -39,7 +39,7 @@ MainAsset::register($this);
                         'options' => ['class' => 'navbar-nav navbar-right'],
                         'items' => [
                                 ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
-//                                ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
+                                ['label' => Yii::t('app', 'Refsys'), 'url' => ['/site/referal']],
 //                                ['label' => Yii::t('app', 'FAQ'), 'url' => ['/faq']],
                                 ['label' => Yii::t('app', 'Login'), 'url' => ['/user/security/login'], 'visible' => Yii::$app->user->isGuest],
                                 ['label' => Yii::t('app', 'Register'), 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest],

@@ -17,9 +17,9 @@ class PrizeWidget extends Widget{
                 ->where(['type' => 'PRIZE'])
                 ->orderBy(['confirmed_at' => SORT_DESC])
                 ->limit(7);
-        if($this->case_id){
-            $query->andWhere(['case_id' => $this->case_id]);
-        }
+//        if($this->case_id){
+//            $query->andWhere(['case_id' => $this->case_id]);
+//        }
         return $query;
     }
 

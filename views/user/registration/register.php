@@ -11,6 +11,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dektrium\user\widgets\Connect;
 
 /**
  * @var yii\web\View              $this
@@ -54,5 +55,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <p class="text-center">
             <?= Html::a(Yii::t('user', 'Already registered? Sign in!'), ['/user/security/login']) ?>
         </p>
+        <?= Connect::widget([
+            'baseAuthUrl' => ['/user/security/auth'],
+        ]) ?>
     </div>
 </div>

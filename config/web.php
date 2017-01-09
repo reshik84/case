@@ -75,6 +75,16 @@ $config = [
             'class' => 'app\websocket\Client',
             'url' => 'tcp://127.0.0.1:8004',
         ],
+        'authClientCollection' => [
+            'class' => yii\authclient\Collection::className(),
+            'clients' => [
+                'vkontakte' => [
+                    'class' => 'dektrium\user\clients\VKontakte',
+                    'clientId' => '5814773',
+                    'clientSecret' => 'hZOV7hapgbg9KFVJos3b',
+                ],
+            ],
+        ],
     ],
     'params' => $params,
     'modules' => [

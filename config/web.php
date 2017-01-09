@@ -1,5 +1,7 @@
 <?php
 
+require(__DIR__ . '/events.php');
+
 $params = require(__DIR__ . '/params.php');
 
 $config = [

@@ -1,5 +1,5 @@
 function wsStart() {
-    ws = new WebSocket("ws://case-opener.com:8004");
+    ws = new WebSocket("wss://case-opener.com/ws/");
     
     ws.onopen = function () {
         

@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
  * @var dektrium\user\Module           $module
  */
 
-$this->title = Yii::t('user', 'Sign in');
+$this->title = 'Вход | case-opener.com';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -56,13 +56,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     ->passwordInput()
                     ->label(
                         Yii::t('user', 'Password')
-                        .($module->enablePasswordRecovery ?
-                            ' (' . Html::a(
-                                Yii::t('user', 'Forgot password?'),
-                                ['/user/recovery/request'],
-                                ['tabindex' => '5']
-                            )
-                            . ')' : '')
+//                        .($module->enablePasswordRecovery ?
+//                            ' (' . Html::a(
+//                                Yii::t('user', 'Forgot password?'),
+//                                ['/user/recovery/request'],
+//                                ['tabindex' => '5']
+//                            )
+//                            . ')' : '')
                     ) ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '4']) ?>

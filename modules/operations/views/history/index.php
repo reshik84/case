@@ -19,7 +19,7 @@ use kartik\grid\GridView;
  * @var $model dektrium\user\models\SettingsForm
  */
 
-$this->title = 'История';
+$this->title = 'История' . ' | case-opener.com';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

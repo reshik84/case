@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Главная';
+$this->title = 'Главная | case-opener.com';
 ?>
 <div class="site-index">
 <?= app\widgets\prize\PrizeWidget::widget() ?>

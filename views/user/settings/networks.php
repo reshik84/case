@@ -17,7 +17,7 @@ use yii\helpers\Html;
  * @var yii\widgets\ActiveForm $form
  */
 
-$this->title = Yii::t('user', 'Networks');
+$this->title = Yii::t('user', 'Networks')  . ' | case-opener.com';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

@@ -82,6 +82,8 @@ $config = [
             'clients' => [
                 'vkontakte' => [
                     'class' => 'dektrium\user\clients\VKontakte',
+//                    'clientId' => '5815475',
+//                    'clientSecret' => 'vIF2E6zpsxAQDJ0D7ZCG',
                     'clientId' => '5814773',
                     'clientSecret' => 'hZOV7hapgbg9KFVJos3b',
                 ],

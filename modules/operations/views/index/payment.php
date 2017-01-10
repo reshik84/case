@@ -1,3 +1,6 @@
+<?php 
+$this->title = 'Пополнение счета' . ' | case-opener.com';
+?>
 <?= \yarcode\freekassa\RedirectForm::widget([
     'message' => 'Redirecting to payment gateway...',
     'api' => Yii::$app->get('freeKassa'),

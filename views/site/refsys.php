@@ -1,6 +1,9 @@
 <?php
 
 /* @var $this yii\web\View */
+
+$this->title = 'Партнерская программа | case-opener.com';
+
 ?>
 
 <h2>Партнерская программа</h2>

@@ -19,7 +19,7 @@ use dektrium\user\widgets\Connect;
  * @var dektrium\user\Module      $module
  */
 
-$this->title = Yii::t('user', 'Sign up');
+$this->title = 'Регистрация | case-opener.com';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">

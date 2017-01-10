@@ -6,7 +6,7 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yarcode\freekassa\Merchant;
-
+$this->title = 'Вывод средств' . ' | case-opener.com';
 ?>
 <h3>Вывод средств</h3>
 <br />

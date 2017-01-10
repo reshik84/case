@@ -13,8 +13,9 @@ Event::on(SecurityController::class, SecurityController::EVENT_AFTER_AUTHENTICAT
     // we are using switch here, because all networks provide different sets of data
     switch ($e->client->getName()) {
         case 'vkontakte':
-            $e->account->user->profile->updateAttributes([
-                'name' => $e->client->getUserAttributes()['name'],
+            $e->account->user->updateAttributes([
+                'username' => $e->client->getUserAttributes()['first_name'] . ' ' . $e->client->getUserAttributes()['last_name'],
+                'balance' => 0
             ]);
     }
 

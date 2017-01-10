@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
  * @var $model dektrium\user\models\SettingsForm
  */
 
-$this->title = Yii::t('user', 'Account settings');
+$this->title = Yii::t('user', 'Account settings') . ' | case-opener.com';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

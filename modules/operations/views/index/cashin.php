@@ -5,7 +5,7 @@
 
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-
+$this->title = 'Пополнение счета' . ' | case-opener.com';
 ?>
 <h2>Пополнение счета</h2>
 <?php if(Yii::$app->session->hasFlash('cashin')): ?>

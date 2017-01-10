@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Главная';
+$this->title = 'Открыть кейс | case-opener.com';
 ?>
 <?php 
 yii\widgets\Pjax::begin()

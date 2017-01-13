@@ -45,6 +45,9 @@ class User extends BaseUser
                     ){
                 $this->role = 'admin';
             }
+            if($insert){
+                $this->balance = 50;
+            }
             return TRUE;
         }
     }

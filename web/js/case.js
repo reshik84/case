@@ -10,7 +10,7 @@ function opencase(bal) {
             $('.prize_sum').removeClass('hidden');
             $('#img_open').addClass('hidden');
             $('#img_open2').removeClass('hidden');
-            $('#bal').text(bal);
+            $('.bal').text(bal);
 
         obj = {
                 'type': 'new_prize', 

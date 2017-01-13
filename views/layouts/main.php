@@ -45,7 +45,7 @@ MainAsset::register($this);
                                 ['label' => Yii::t('app', 'Register'), 'url' => ['/user/registration/register'], 'visible' => Yii::$app->user->isGuest],
 //                                ['label' => Yii::$app->user->identity->username . ' (' . Yii::$app->user->identity->balance . ' руб)', 'url' => ['/user/settings'], 'visible' => !Yii::$app->user->isGuest],
                             Yii::$app->user->isGuest ? (''):(
-                            '<li>' . Html::a(Yii::$app->user->identity->username . ' (<span id="bal">' . Yii::$app->formatter->asInteger(Yii::$app->user->identity->balance) . '</span> руб)', ['/user/settings/account']) . '</li>'),
+                            '<li>' . Html::a(Yii::$app->user->identity->username . ' (<span class="bal">' . Yii::$app->formatter->asInteger(Yii::$app->user->identity->balance) . '</span> руб)', ['/user/settings/account']) . '</li>'),
                             Yii::$app->user->isGuest ? (
                                     ''
                                     ) : (
@@ -66,6 +66,11 @@ MainAsset::register($this);
                     <div id="column2">
                         <main>
                             <div class="container-fluid">
+                                <div class="text-center">
+                                    <h3>Ваш баланс: <span class="bal"><?= Yii::$app->formatter->asInteger(Yii::$app->user->identity->balance) ?></span> руб</h3>
+                                    <?= Html::a('Пополнить', ['/operations/index/cashin'], ['class' => 'button']) ?>
+                                    <?= Html::a('Вывести', ['/operations/index/cashout'], ['class' => 'button']) ?>
+                                </div>
                             <?= $content ?>
                             </div>
                         </main>

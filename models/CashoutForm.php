@@ -20,6 +20,7 @@ class CashoutForm extends Model
         return [
             ['sum', 'required'],
             ['sum', 'integer', 'min' => 100, 'max' => 15000],
+            ['sum', 'usermax'],
             ['psys', 'required'],
             ['psys', 'in', 'range' => array_keys(Merchant::getCurrencies())],
             ['wallet', 'required']
@@ -45,6 +46,13 @@ class CashoutForm extends Model
         $operation->save();
         $this->id = $operation->id;
         return Operation::findOne(['id' => $this->id]);
+    }
+    
+    public function usermax($attribute, $params){
+        $user = User::find()->where(['id' => \Yii::$app->user->id])->one();
+        if($user->balance <= $this->sum){
+            $this->addError($attribute, 'Максимально доступная сумма для вывода ' . round($user->balance) .' руб');
+        }
     }
     
 }

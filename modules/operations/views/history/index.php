@@ -28,9 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= $this->render('//user/settings/_menu') ?>
     </div>
     <div class="col-md-9">
+        <?php if (!Yii::$app->user->isGuest): ?>
         <h3>Ваш баланс: <?= Yii::$app->formatter->asInteger(Yii::$app->user->identity->balance) ?> руб</h3>
         <?= Html::a('Пополнить', ['/operations/index/cashin'], ['class' => 'button']) ?>
         <?= Html::a('Вывести', ['/operations/index/cashout'], ['class' => 'button']) ?>
+        <?php endif; ?>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>

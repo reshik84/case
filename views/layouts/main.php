@@ -66,11 +66,13 @@ MainAsset::register($this);
                     <div id="column2">
                         <main>
                             <div class="container-fluid">
+                                <?php if (!Yii::$app->user->isGuest): ?>
                                 <div class="text-center">
                                     <h3>Ваш баланс: <span class="bal"><?= Yii::$app->formatter->asInteger(Yii::$app->user->identity->balance) ?></span> руб</h3>
                                     <?= Html::a('Пополнить', ['/operations/index/cashin'], ['class' => 'button']) ?>
                                     <?= Html::a('Вывести', ['/operations/index/cashout'], ['class' => 'button']) ?>
                                 </div>
+                                <?php endif; ?>
                             <?= $content ?>
                             </div>
                         </main>

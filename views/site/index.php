@@ -47,7 +47,7 @@ if(!Yii::$app->request->cookies->get('first')):
         <p>Каждый при регистрации получает <span style="font-size: 24px;">50</span> рублей на счет!</p>
       </div>
         <div class="modal-footer" style="text-align: center;">
-        <button type="button" class="btn btn-primary">Зарегистрироваться</button>
+            <a class="btn btn-primary" style="color: white;" href="<?= \yii\helpers\Url::toRoute(['user/register']) ?>">Зарегистрироваться</a>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

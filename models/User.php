@@ -30,6 +30,7 @@ class User extends BaseUser
         $rules[] = ['balance', 'number', 'min' => 0];
         $rules[] = ['role', 'in', 'range' => ['user', 'admin']];
         $rules[] = ['sponsor_id', 'number'];
+        unset($rules['usernameMatch']);
         return $rules;
     }
     

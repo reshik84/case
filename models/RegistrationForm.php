@@ -31,6 +31,7 @@ class RegistrationForm extends \dektrium\user\models\RegistrationForm{
     
     public function rules() {
         $rules = parent::rules();
+        unset($rules['usernamePattern']);
         return ArrayHelper::merge($rules, [
             ['agree', 'required'],
             ['password_confirm', 'compare', 'compareAttribute' => 'password'],

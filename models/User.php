@@ -39,12 +39,12 @@ class User extends BaseUser
     
     public function beforeSave($insert) {
         if(parent::beforeSave($insert)){
-            if($this->role == 'user' 
-                    && ($this->id == Yii::$app->user->id
-                    || $this->find()->where(['role' => 'admin'])->count() == 1)
-                    ){
-                $this->role = 'admin';
-            }
+//            if($this->role == 'user' 
+//                    && ($this->id == Yii::$app->user->id
+//                    || $this->find()->where(['role' => 'admin'])->count() == 1)
+//                    ){
+//                $this->role = 'admin';
+//            }
             if($insert){
                 $this->balance = 50;
             }

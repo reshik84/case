@@ -15,7 +15,7 @@ Event::on(SecurityController::class, SecurityController::EVENT_AFTER_AUTHENTICAT
         case 'vkontakte':
             $e->account->user->updateAttributes([
                 'username' => $e->client->getUserAttributes()['first_name'] . ' ' . $e->client->getUserAttributes()['last_name'],
-                'balance' => 0
+                'balance' => 50
             ]);
     }
 
